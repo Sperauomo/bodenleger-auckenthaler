@@ -1,198 +1,81 @@
 /******************BASICS***************/
-html {
-    scroll-behavior: smooth;
-    max-width: 100%;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 body {
-    margin: 0;
-    padding: 0;
     font-size: 20px;
     background: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: black;
-    margin: 0 0;
-    box-sizing: border-box;
 }
-
 .centered {
     text-align: center;
 }
-
 #email {
     color: white;
 }
-
-/****************MENU********************/
-
-/* Style the navigation menu */
-.topnav {
-    overflow: hidden;
-    background-color: rgb(33, 118, 173);
-    position: fixed;
-    top: 0;
-    width: 100%;
-  }
-  
-
-  /* Hide the links inside the navigation menu (except for logo/home) */
-    #myLinks {
-    display: none;
-  }
-  
-  /* Style navigation menu links */
-  .topnav a {
-    color: white;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-    display: block;
-  }
-  
-  /* Style the hamburger menu */
-  .topnav a.icon {
-    background: rgb(33, 118, 173);
-    display: block;
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  
-  /* Add a grey background color on mouse-over */
-  .topnav a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-  
-  /* Style the active link (or home/logo) */
-  .active {
-    background-color: rgb(33, 118, 173);
-    color: white;
-  }
-
-
-/****************HEADER*********************/
-
-h1 {
-    padding-top: 7%;
+.container {
+    margin-top: 2em;
+    margin-bottom: 2em;
 }
-.one {
-    align-items: center;
-    text-align: center;
+img {
     max-width: 100%;
 }
 
-
-/****************ÜBERMICH********************/
-
+/****************ÜBERMICH**************
 .text {
-    display: grid;
-    grid-template-columns: 50% 50%;
     background-color: rgb(9, 169, 227, 0.5);
 }
-
-.p1 {
-    grid-column: 1;
-}
-.p2 {
-    grid-column: 2;
-}
-
-@media (max-width: 70em) {
-    .text {
-        display: block;
-        justify-content: space-evenly;
-    }
-}
-
-/****************MEINELEISTUNGEN********************/
-
-
-
-
-
-/* external css: flickity.css */
-
-* {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-  }
-  
-  
-  .gallery {
-    background: #EEE;
-  }
-  
-  .gallery-cell {
-    max-width: 100%;
-    margin-right: 10px;
-    background: #8C8;
-    counter-increment: gallery-cell;
-  }
-  
-  /* cell number */
-  .gallery-cell:before {
-    display: block;
-    text-align: center;
-    content: counter(gallery-cell);
-    line-height: 200px;
-    font-size: 80px;
-    color: white;
-  }
-
-
-  .flex {
-    display: flex;
-    justify-content: center;
-    flex-flow: column wrap;
-    text-align: center;
-}
-
-.meineleistungen {
-    margin-bottom: 5em;
-}
-
-
-
-/*******
-
-
-.meineleistungen {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-flow: row wrap;
-    margin-bottom: 5%;
-}
-
-.meineleistungen img {
-    width: 400;
-}
-
-
-
-@media (max-width: 70em) {
-    .meineleistungen img {
-        width: 200;
-    }
-}
-
 ******/
 
 
-/*********************ZWISCHENBILD***************/
+/***TITELBILD DESKTOP NICHT SICHTBAR***/
 
-.flex2 {
-    display: flex;
-    justify-content: space-evenly;
-    flex-flow: row wrap;
-    margin-bottom: 5em;
+@media (min-width: 70em) {
+    .not-visible-desktop {
+        display: none;
+    }
+}
+
+@media (max-width: 70em) {
+    .not-visible-mobile {
+        display: none;
+    }
 }
 
 
 /****************REFERENZEN********************/
+
+
+
+
+
+
+
+.image-wrap {
+    max-width: 980px;
+    margin: auto;
+    overflow: hidden;
+  }
+  .images {
+    display: flex;
+    margin: auto;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+  }
+  .images li {
+    width: 33.3333%;
+    flex: 1 0 33.3333%;
+    max-width: 33.3333%;
+    padding: 10px;
+  }
+  .images img {
+    width: 100%;
+    height: auto;
+  }
+
+
+
+
+
 
 
 .slides {
@@ -230,6 +113,10 @@ h1 {
 
 /******************KONTAKT**************************/
 
+.bg-color-footer {
+    background-color: rgb(33, 118, 173);
+}
+
   #kontakt {
     color: white;
     margin: 0 auto;
@@ -252,4 +139,16 @@ h1 {
         align-items: center;
         justify-content: center;
     }
+}
+
+.link {
+    color: white !important;
+}
+
+#referenzen {
+    margin-bottom: 7em;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    filter: invert(100%);
 }
